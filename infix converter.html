@@ -1,0 +1,439 @@
+<html>
+    <head>
+        <title>E-CLACULATOR</title>
+        <link rel="icon" href="file-GFKjqjb7z7aqrpmRq7YZAo.webp" type="image/x-icon">
+        <style>
+            .u{
+                list-style-type:none;
+                margin: 0%;
+                padding: 0%;
+                position: fixed;
+            }
+            .u li{
+                display:inline-block;
+                float:left;
+                text-align: center;
+                padding: 10px;
+                padding-top: 30px;
+                margin:0px;
+                width:110px;
+                background-color: #3E7B27;
+                color: #F5ECE0;
+                height:40px;
+                cursor: pointer;
+            }
+            .a:hover{
+                color: white;
+                font-size:110%;
+                background-color: #255f38;
+                transition-delay: 0ms;
+            }
+            .di u{
+                list-style-type:none;
+                margin: 0%;
+                padding: 0%;
+                position: fixed;
+            }
+            .di li{
+                display:inline-block;
+                text-align: center;
+                padding: 5px;
+                margin:7px;
+                border-radius: 5px;
+                border: 2px solid black;
+                width:150px;
+                background-color: #3E7B27;
+                color: #F5ECE0;
+                cursor: pointer;
+                position: relative;
+                right:15%;
+            }
+            .di li:hover{
+                color: white;
+                font-size:110%;
+                background-color: #255f38;
+                transition-delay: 0ms;
+            }
+            button{
+                background-color: #f0c14b;
+                border: 2px solid black;
+                border-radius: 15px;
+                color:black;
+                font-size: 14px;
+                padding: 8px 20px;
+                cursor: pointer;
+                width: 100%; 
+                text-align: center;
+                display: inline-block;
+                transition: background-color 0.3s ease-in-out;
+            }
+            button:hover {
+                background-color: #eeb934;
+            }
+            button:active {
+                background-color: #d8a828;
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+            }
+            div>div{
+                background-color:#356e48;
+                border: none;
+                border-radius: 6px;
+            }
+            .di{
+                display: flex;
+                height:auto;
+                align-content: stretch;
+            }
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 8px;
+                text-align: center;
+                box-shadow: 10px rgb(0,0, 0,0.3); 
+                color:#F5ECE0;
+                background-color: rgb(37, 95, 56,0.8);
+            }
+            #calcTable{
+                display: none;
+                width: fit-content;
+            }
+            .convert{
+                background-color: #007BFF;
+                color: white;
+                padding:10px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                width: 100px;
+            }
+            .convert:hover{
+                opacity: 0.8;
+                background-color: #007BFF;
+            }
+            a{
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body style="padding: 0%;margin: 0%;background-color: #255f38;">
+        <div>
+        <ul class="u">
+            <li style="width:50px;padding-top: 15px;padding-bottom: 25px;padding-right:15px;border-radius: 5px;"><img src="file-GFKjqjb7z7aqrpmRq7YZAo.webp" alt="logo" height="56px" width="56px" style="border-radius: 50%;"></li>
+            <a href="home page.html"><li class="a">Home</li></a>
+            <a href="infix converter.html"><li class="a" style="background-color: #255f38;color: white;font-size: 115%;">Converters</li></a>
+            <a href="postfix.html"><li class="a">Calculators</li></a>
+            <a href="contact us.html"><li class="a">Contact Us</li></a>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li style="width: 105px;"><button>Login</button></li>
+        </ul>
+        </div>
+        <br>
+        <br><br><br>
+        <div class="di">
+            <div style="width: 15%;margin-top:6px;">
+                <ul>
+                    <a href="infix converter.html"><li style="color: white;font-size:110%;background-color: #255f38;">Infix Converter</li></a>
+                    <a href="decimal converter.html"><li>Decimal Converter</li></a>
+                    <a href="binary converter.html"><li>Binary Converter</li></a>
+                </ul>
+            </div>
+            <div style="margin-top: 28px;width: 79%;position: relative;left:3%;padding-left: 15px;padding-top:5px;height:540px;padding-right: 15px;overflow-y:auto;scrollbar-width: none;">
+                <center>
+                    <h1 style="color: rgb(241, 184, 42);">Infix to Postfix Converter</h1>
+                    <hr width="90%">
+                    <h2>What is infix and postfix expression?</h2>
+                </center>
+                <p style="color: #F5ECE0;">An infix expression is expression which is used by us in day today life An infix expression is a single letter, or an operator, proceeded by one 
+                    infix string and followed by another infix string. e.g. A,A + B,(A + B) + (C – D).So,in which we have operators between operands.And postfix expression (also called Reverse 
+                    Polish Notation) is a single letter or an operator, preceded by two postfix strings. Every postfix string longer than a single variable contains first and second operands followed 
+                    by an operator.e.g. A,A B +,A B + C D - </p>
+                <center><h2>How to Convert Infix to Postfix Expression?</h2></center>
+                <p style="color: #F5ECE0;">To convert infix expression to postfix expression, computers usually use the stack data structure. 
+                    By scanning the infix expression from left to right, when we will get any operand, simply add them to the postfix form, and for the operator and parenthesis,
+                     add them in the stack maintaining the precedence of them.So, here you can convert infix expression to postfix by just entering infix expression.Checkout examples 
+                     that are mention below in table</p>
+                <h3 style="color:#F5ECE0;">Examples:</h3>
+                    <div style="box-shadow: 10px rgb(0,0, 0,0.3); color:#F5ECE0;border-radius: 10px;padding: 10px;background-color: #255f38;opacity:0.8;">
+                        <p>1) Infix Expression: (a+b)</p>
+                        <p>Postfix Expression: ab+</p>
+                        <p>2) Infix Expression: (A+B)*(C+D)</p>
+                        <p>Postfix Expression: AB+CD+</p>
+                        <p>3) Infix Expression: x^y/(5*z)+2</p>
+                        <p>Postfix Expression: xy^5z*/2+</p>
+                    </div>
+                    <center>
+                        <h2>Converter</h2>
+                    </center>
+                    <label for="expression" style="color: #F5ECE0;">Enter Expression : </label>
+                    <label><input type="text" name="postfixInput" id="input" placeholder="e.g. 5 + 2 * 3 / ( 4 - 2 )" style="border-radius: 7px;width: 30%;"> </label>
+                    <button onclick="convertInfixToPostfix()" class="convert">CONVERT</button>
+                    <br><br>
+                    <center>
+                    <h2 style="display: none;" id="method">Method</h2>
+                    <table id="conversion" style="display: none;width:fit-content;">
+                        <tr>
+                          <th>Step</th>
+                          <th>Token</th>
+                          <th>Stack</th>
+                          <th>Operation</th>
+                        </tr>
+                    </table>
+                    </center>
+                    <h3 style="color: #F5ECE0;display: none;" id="final">Final Result: <span id="postfixOutput"></span></h3>
+                <center><h2>Applications</h2></center>
+                <p style="color: #F5ECE0;">Infix expressions are readable and solvable by humans. We can easily distinguish the order of operators, and also can use the parenthesis 
+                    to solve that part first during solving mathematical expressions. The computer cannot differentiate the operators and parenthesis easily, that’s why postfix conversion
+                     is needed.Compilers or command editor in computer and some  calculators also convert expression to postfix first and then solve those expression to evaluate answer 
+                     for the same.</p>
+                    <br><br>
+                    <!-- <hr> -->
+                    
+
+
+
+
+
+                <center>
+                    <h1 style="color: rgb(241, 184, 42);">Infix to Prefix Converter</h1>
+                    <hr width="90%">
+                    <h2>What is infix and prefix expression?</h2>
+                </center>
+                <p style="color: #F5ECE0;">An infix expression is expression which is used by us in day today life An infix expression is a single letter, or an operator, proceeded by one infix string 
+                    and followed by another infix string. e.g. A,A + B,(A + B) + (C – D).So,in which we have operators between operands.
+                    An expression is called the prefix expression if the operator appears in the expression before the operands. Simply of the form (operator operand1 operand2).e.g. *+AB-CD                    
+                </p>
+                <center><h2>How to Convert Infix to Prefix Expression?</h2></center>
+                <pre style="color: #F5ECE0;">To convert Infix to Prefix expression, computers usually use the stack data structure.
+1. Reverse the infix expression.
+2.Obtain the “nearly” postfix expression of the modified expression .
+3. Reverse the postfix expression.
+                    </pre>
+                <h3 style="color:#F5ECE0;">Examples:</h3>
+                    <div style="box-shadow: 10px rgb(0,0, 0,0.3); color:#F5ECE0;border-radius: 10px;padding: 10px;background-color: #255f38;opacity:0.8;">
+                        <p>1) Infix Expression: (a+b)</p>
+                        <p>Prefix Expression: +ab</p>
+                        <p>2) Infix Expression: A*B+C/D</p>
+                        <p>Prefix Expression: + * A B/ C D</p>
+                        <p>3) Infix Expression: (a+b)*(c+d)</p>
+                        <p>Prefix Expression: *+ab+cd</p>
+                    </div>
+                    <center>
+                        <h2>Converter</h2>
+                    </center>
+                    <label for="inputExpression" style="color: #F5ECE0;">Enter Expression : </label>
+                    <label>
+                        <input type="text" name="infixInput" id="inputExpression" placeholder="e.g. 5 + 2 * 3 / ( 4 - 2 )" style="border-radius: 7px;width: 30%;"> 
+                    </label>
+                    <button onclick="convertInfixToPrefix()" class="convert">CONVERT</button>
+                    <br><br>
+
+                    <center>
+                        <h2 style="display: none;" id="methodTitle">Method</h2>
+                        <table id="conversionTable" style="display: none;width:fit-content;">
+                            <tr>
+                                <th>Step</th>
+                                <th>Token</th>
+                                <th>Stack</th>
+                                <th>Action</th>
+                            </tr>
+                        </table>
+                    </center>
+                    <h3 style="color: #F5ECE0;display: none;" id="finalAnswer">Final Result: <span id="prefixOutput"></span></h3>
+                    <center><h2>Applications</h2></center>
+                    <p style="color: #F5ECE0;">Infix expressions are readable and solvable by humans. We can easily distinguish the order of operators, and also can use the parenthesis to solve
+                        that part first during solving mathematical expressions. The computer cannot differentiate the operators and parenthesis easily, that’s why postfix/prefix conversion is 
+                        needed.Compilers or command editor in computer and some  calculators also convert expression to prefix/postfix first and then solve those expression to evaluate answer for the same.</p>
+                    <br><br>
+            </div>
+        </div>
+        <script>
+            function convertInfixToPostfix() {
+                const expr = document.getElementById('input').value.trim();
+                const tokens = expr.split(/\s+/);
+                const stack = [];
+                const output = [];
+                const table = document.getElementById("conversion");
+                document.getElementById('conversion').style.display = "block";
+                document.getElementById('method').style.display = "inline";
+                document.getElementById('final').style.display = "inline";
+                // Clear previous rows
+                table.innerHTML = `
+                    <tr>
+                        <th>Step</th>
+                        <th>Token</th>
+                        <th>Stack</th>
+                        <th>Action</th>
+                    </tr>
+                `;
+                const precedence = {
+                    '+': 1,
+                    '-': 1,
+                    '*': 2,
+                    '/': 2,
+                    '^': 3
+                };
+                const isOperator = (c) => ['+', '-', '*', '/', '^'].includes(c);
+                let step = 1;
+                for (let token of tokens) {
+                    let action = "";
+                    if (!isNaN(token)) {
+                        output.push(token);
+                        action = `Added operand ${token} to output`;
+                    } else if (token === '(') {
+                        stack.push(token);
+                        action = `Pushed '(' to stack`;
+                    } else if (token === ')') {
+                        while (stack.length && stack[stack.length - 1] !== '(') {
+                            const popped = stack.pop();
+                            output.push(popped);
+                            action += `Popped ${popped} from stack to output. `;
+                        }
+                        stack.pop(); // Remove '('
+                        action += `Popped '(' from stack`;
+                    } else if (isOperator(token)) {
+                        while (
+                            stack.length &&
+                            precedence[stack[stack.length - 1]] >= precedence[token] &&
+                            stack[stack.length - 1] !== '('
+                        ) {
+                            const popped = stack.pop();
+                            output.push(popped);
+                            action += `Popped ${popped} from stack to output. `;
+                        }
+                        stack.push(token);
+                        action += `Pushed operator ${token} to stack`;
+                    } else {
+                        action = `Ignored unknown token: ${token}`;
+                    }
+                    const row = table.insertRow();
+                    row.innerHTML = `
+                        <td>${step++}</td>
+                        <td>${token}</td>
+                        <td>[${stack.join(", ")}]</td>
+                        <td>${action}</td>
+                    `;
+                }
+                // Pop any remaining operators
+                while (stack.length) {
+                    const popped = stack.pop();
+                    output.push(popped);
+                }
+                const row = table.insertRow();
+                row.innerHTML = `
+                    <td>${step}</td>
+                    <td>-</td>
+                    <td>[ ]</td>
+                    <td>Final postfix expression: ${output.join(" ")}</td>
+                `;
+                document.getElementById("postfixOutput").innerText = output.join(" ");
+            }
+            
+
+
+
+            function convertInfixToPrefix() {
+                const inputExpr = document.getElementById('inputExpression').value.trim();
+                const outputTable = document.getElementById("conversionTable");
+                document.getElementById('conversionTable').style.display = "block";
+                document.getElementById('methodTitle').style.display = "inline";
+                document.getElementById('finalAnswer').style.display = "inline";
+
+                outputTable.innerHTML = `
+                    <tr>
+                        <th>Step</th>
+                        <th>Token</th>
+                        <th>Stack</th>
+                        <th>Action</th>
+                    </tr>
+                `;
+
+                function getPrecedence(op) {
+                    if (op === '+' || op === '-') return 1;
+                    if (op === '*' || op === '/') return 2;
+                    if (op === '^') return 3;
+                    return 0;
+                }
+
+                function isOperator(ch) {
+                    return ['+', '-', '*', '/', '^'].includes(ch);
+                }
+
+                function reverseAndFixBrackets(exp) {
+                    let reversed = "";
+                    for (let i = exp.length - 1; i >= 0; i--) {
+                        if (exp[i] === '(') reversed += ')';
+                        else if (exp[i] === ')') reversed += '(';
+                        else reversed += exp[i];
+                    }
+                    return reversed;
+                }
+
+                let cleanedExpr = inputExpr.replace(/\s+/g, '');
+                let reversedExpr = reverseAndFixBrackets(cleanedExpr);
+                let opStack = [];
+                let prefixResult = [];
+                let stepCount = 1;
+
+                for (let i = 0; i < reversedExpr.length; i++) {
+                    let symbol = reversedExpr[i];
+                    let action = "";
+
+                    if (!isNaN(symbol)) {
+                        prefixResult.push(symbol);
+                        action = `Added operand ${symbol} to output`;
+                    } else if (symbol === '(') {
+                        opStack.push(symbol);
+                        action = `Pushed ${symbol} to stack`;
+                    } else if (symbol === ')') {
+                        while (opStack.length && opStack[opStack.length - 1] !== '(') {
+                            let poppedOp = opStack.pop();
+                            prefixResult.push(poppedOp);
+                            action += `Popped ${poppedOp} to output. `;
+                        }
+                        opStack.pop(); // Remove '('
+                        action += `Popped ( from stack`;
+                    } else if (isOperator(symbol)) {
+                        while (opStack.length &&
+                            getPrecedence(opStack[opStack.length - 1]) > getPrecedence(symbol)) {
+                            let poppedOp = opStack.pop();
+                            prefixResult.push(poppedOp);
+                            action += `Popped ${poppedOp} to output. `;
+                        }
+                        opStack.push(symbol);
+                        action += `Pushed ${symbol} to stack`;
+                    }
+
+                    const row = outputTable.insertRow();
+                    row.innerHTML = `
+                        <td>${stepCount++}</td>
+                        <td>${symbol}</td>
+                        <td>[${opStack.join(", ")}]</td>
+                        <td>${action}</td>
+                    `;
+                }
+
+                while (opStack.length) {
+                    prefixResult.push(opStack.pop());
+                }
+
+                prefixResult.reverse();
+
+                const finalRow = outputTable.insertRow();
+                finalRow.innerHTML = `
+                    <td>${stepCount}</td>
+                    <td>—</td>
+                    <td>[ ]</td>
+                    <td>Final prefix expression: ${prefixResult.join(" ")}</td>
+                `;
+
+                document.getElementById("prefixOutput").innerText = prefixResult.join(" ");
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,207 @@
+<html>
+    <head>
+        <title>E-CLACULATOR</title>
+        <link rel="icon" href="file-GFKjqjb7z7aqrpmRq7YZAo.webp" type="image/x-icon">
+        <style>
+            .u{
+                list-style-type:none;
+                margin: 0%;
+                padding: 0%;
+                position: fixed;
+            }
+            .u li{
+                display:inline-block;
+                float:left;
+                text-align: center;
+                padding: 10px;
+                padding-top: 30px;
+                margin:0px;
+                width:110px;
+                background-color: #3E7B27;
+                color: #F5ECE0;
+                height:40px;
+                cursor: pointer;
+            }
+            .a:hover{
+                color: white;
+                font-size:110%;
+                background-color: #255f38;
+                transition-delay: 0ms;
+            }
+            .di u{
+                list-style-type:none;
+                margin: 0%;
+                padding: 0%;
+                position: fixed;
+            }
+            .di li{
+                display:inline-block;
+                text-align: center;
+                padding: 5px;
+                margin:7px;
+                border-radius: 5px;
+                border: 2px solid black;
+                width:150px;
+                background-color: #3E7B27;
+                color: #F5ECE0;
+                cursor: pointer;
+                position: relative;
+                right:15%;
+            }
+            .di li:hover{
+                color: white;
+                font-size:110%;
+                background-color: #255f38;
+                transition-delay: 0ms;
+            }
+            button{
+                background-color: #f0c14b;
+                border: 2px solid black;
+                border-radius: 15px;
+                color:black;
+                font-size: 14px;
+                padding: 8px 20px;
+                cursor: pointer;
+                width: 100%; 
+                text-align: center;
+                display: inline-block;
+                transition: background-color 0.3s ease-in-out;
+            }
+            button:hover {
+                background-color: #eeb934;
+            }
+            button:active {
+                background-color: #d8a828;
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+            }
+            div>div{
+                background-color:#356e48;
+                border: none;
+                border-radius: 6px;
+            }
+            .di{
+                display: flex;
+                height:auto;
+                align-content: stretch;
+            }
+            .convert{
+                background-color: #007BFF;
+                color: white;
+                padding:10px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                width: 100px;
+            }
+            .convert:hover{
+                opacity: 0.8;
+                background-color: #007BFF;
+            }
+        </style>
+    </head>
+    <body style="padding: 0%;margin: 0%;background-color: #255f38;">
+        <div>
+        <ul class="u">
+            <li style="width:50px;padding-top: 15px;padding-bottom: 25px;padding-right:15px;border-radius: 5px;"><img src="file-GFKjqjb7z7aqrpmRq7YZAo.webp" alt="logo" height="56px" width="56px" style="border-radius: 50%;"></li>
+            <a href="home page.html"><li class="a">Home</li></a>
+            <a href="infix converter.html"><li class="a">Converters</li></a>
+            <a href="postfix.html"><li class="a" style="background-color: #255f38;color: white;font-size: 115%;">Calculators</li></a>
+            <a href="contact us.html"><li class="a">Contact Us</li></a>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li style="width: 105px;"><button>Login</button></li>
+        </ul>
+        </div>
+        <br>
+        <br><br><br>
+        <div class="di">
+            <div style="width: 15%;margin-top:6px;">
+                <ul>
+                    <a href="postfix.html"><li>Postfix Calculator</li></a>
+                    <a href="prefix.html"><li>Prefix Calculator</li></a>
+                    <a href="hcf lcm.html"><li style="color: white;font-size:110%;background-color: #255f38;">Hcf/Lcm Calculator</li></a>
+                </ul>
+            </div>
+            <div style="margin-top: 28px;width: 79%;position: relative;left:3%;padding-left: 15px;height:540px;padding-right: 15px;overflow-y:auto;scrollbar-width: none;">
+                <center>
+                    <h1 style="color: rgb(241, 184, 42);">HCF LCM Calculator</h1>
+                    <hr width="90%">
+                    <h2>What is Hcf and Lcm?</h2>
+                </center>
+                <p style="color: #F5ECE0;">Hcf(Highest common factor) is very similar to GCD(greatest common divisor) helps us to find highest factors 
+                    of numbers which should be common or else it would be 1. On the other hand LCM(lowest common multiple) is taking multiples(for 4 it is 4,8,12) 
+                    of all numbers and then select common of between all of then but is should be lowest.
+                    You can see explanation of both of them with some examples in below.</p>
+                <center><h2>How to calculate HCF & LCM?</h2></center>
+                <pre style="color: #F5ECE0;">
+1.Evaluating HCF
+Let us suppose we have 3 numbers 3,6,30
+First,we are going to find numbers(factor) which are divisible with give number(of which we intend to find hcf) and then take highest common among them
+for 3 - 3
+for 6 - 2,3,6
+for 30 - 2,3,5,10,15,30
+So,in above the common numbers are 2,3 but in that highes is 3 so HCF will be 3.
+
+2.Evaluating LCM
+Considering same example as above,
+We are going to find multiples of all numbers and will check lowest common value among them
+for 3 - 3,6,9,12,15...30,33
+for 6 - 6,12,18,24,30,36
+for 30 - 30,60
+So,in above common numbers between 3,6 are 6,12,18,24 ... but here lowest one is 6 and if we consider 30 at the same time 30 will be the answer.
+
+                    </pre>
+                <center>
+                    <hr color="#F5ECE0">
+                    <h2>Calculator</h2>
+                </center>
+                <form id="calcForm">
+                    <label for="num1" style="color: #F5ECE0;">Enter first number:</label>
+                    <label for=""><input type="number" id="num1" required style="border-radius: 7px;width: 20%;"></label>
+                    <label for="num2" style="color: #F5ECE0;">Enter second number:</label>
+                    <input type="number" id="num2" required style="border-radius: 7px;width: 20%;">
+                    <button type="submit" class="convert">CALCULATE</button><br>
+                </form>
+                    <p style="display:none; color: #F5ECE0;" id="h">Results:</p>
+                    <p id="result" style="color: #F5ECE0;"></p>
+                    <br>
+                    <hr>
+                <center><h2>Use of this calculator?</h2></center>
+                <p style="color: #F5ECE0;">Help us to common or similarity between numbers.And GCD helps us to solve various mathematical problem very quickly.Variety of
+                     questions based on hcf & lcm are asked in many competetive exams. You can just verify your manual anwers with this or you can calculate directly from this
+                      which can reduce your time.</p>
+                    <br><br><br>
+            </div>
+        </div>
+        <script>
+            function computeHCF(a, b) {
+              while(b) {
+                let temp = b;
+                b = a % b;
+                a = temp;
+              }
+              return a;
+            }
+            function computeLCM(a, b, hcf) {
+              return Math.abs(a * b) / hcf;
+            }
+            document.getElementById('calcForm').addEventListener('submit', function(event) {
+                event.preventDefault();  
+                const num1 = parseInt(document.getElementById('num1').value);
+                const num2 = parseInt(document.getElementById('num2').value);
+                if (isNaN(num1) || isNaN(num2) || num1 <= 0 || num2 <= 0) {
+                    document.getElementById('result').textContent = 'Please enter positive integers.';
+                    return;
+                }
+                const hcf = computeHCF(num1, num2);
+                const lcm = computeLCM(num1, num2, hcf);
+                document.getElementById('result').textContent = `HCF: ${hcf}, LCM: ${lcm}`;
+            });
+            document.getElementById('h').style.display="inline";
+          </script>
+    </body>
+</html>

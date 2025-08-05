@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <title>E-CLACULATOR</title>
+        <link rel="icon" href="file-GFKjqjb7z7aqrpmRq7YZAo.webp" type="image/x-icon">
+        <style>
+            .u{
+                list-style-type:none;
+                margin: 0%;
+                padding: 0%;
+                position: fixed;
+            }
+            .u li{
+                display:inline-block;
+                float:left;
+                text-align: center;
+                padding: 10px;
+                padding-top: 30px;
+                margin:0px;
+                width:110px;
+                background-color: #3E7B27;
+                color: #F5ECE0;
+                height:40px;
+                cursor: pointer;
+            }
+            .a:hover{
+                color: white;
+                font-size:110%;
+                background-color: #255f38;
+                transition-delay: 0ms;
+            }
+            .di u{
+                list-style-type:none;
+                margin: 0%;
+                padding: 0%;
+                position: fixed;
+            }
+            .di li{
+                display:inline-block;
+                text-align: center;
+                padding: 5px;
+                margin:7px;
+                border-radius: 5px;
+                border: 2px solid black;
+                width:150px;
+                background-color: #3E7B27;
+                color: #F5ECE0;
+                cursor: pointer;
+                position: relative;
+                right:15%;
+            }
+            .di li:hover{
+                color: white;
+                font-size:110%;
+                background-color: #255f38;
+                transition-delay: 0ms;
+            }
+            button{
+                background-color: #f0c14b;
+                border: 2px solid black;
+                border-radius: 15px;
+                color:black;
+                font-size: 14px;
+                padding: 8px 20px;
+                cursor: pointer;
+                width: 100%; 
+                text-align: center;
+                display: inline-block;
+                transition: background-color 0.3s ease-in-out;
+            }
+            button:hover {
+                background-color: #eeb934;
+            }
+            button:active {
+                background-color: #d8a828;
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+            }
+            div>div{
+                background-color:#356e48;
+                border: none;
+                border-radius: 6px;
+            }
+            .di{
+                display: flex;
+                height:auto;
+                align-content: stretch;
+            }
+            .convert{
+                background-color: #007BFF;
+                color: white;
+                padding:10px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                width: 150px;
+                margin-top: 20px;
+                margin-right: 20px;
+                border: 2px solid black;
+            }
+            .convert:hover{
+                opacity: 0.8;
+                background-color: #007BFF;
+            }
+        </style>
+    </head>
+    <body style="padding: 0%;margin: 0%;background-color: #255f38;">
+        <div>
+        <ul class="u">
+            <li style="width:50px;padding-top: 15px;padding-bottom: 25px;padding-right:15px;border-radius: 5px;"><img src="file-GFKjqjb7z7aqrpmRq7YZAo.webp" alt="logo" height="56px" width="56px" style="border-radius: 50%;"></li>
+            <a href="home page.html"><li class="a">Home</li></a>
+            <a href="infix converter.html"><li class="a" style="background-color: #255f38;color: white;font-size: 115%;">Converters</li></a>
+            <a href="postfix.html"><li class="a">Calculators</li></a>
+            <a href="contact us.html"><li class="a">Contact Us</li></a>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li style="width: 105px;"><button>Login</button></li>
+        </ul>
+        </div>
+        <br>
+        <br><br><br>
+        <div class="di">
+            <div style="width: 15%;margin-top:6px;">
+                <ul>
+                    <a href="infix converter.html"><li>Infix Converter</li></a>
+                    <a href="decimal converter.html"><li style="color: white;font-size:110%;background-color: #255f38;">Decimal Converter</li></a>
+                    <a href="binary converter.html"><li>Binary Converter</li></a>
+                </ul>
+            </div>
+            <div style="margin-top: 28px;width: 79%;position: relative;left:3%;padding-left: 15px;height:540px;padding-right: 15px;overflow-y:auto;scrollbar-width: none;">
+                <center>
+                    <h1 style="color: rgb(241, 184, 42);">Decimal Number Converter</h1>
+                    <hr width="90%">
+                </center>
+                <p style="color: #F5ECE0;">First up all what is decimal number System?So,it is an number System that we use daily while doing any calculations counting and 
+                    all but it is an system which has a base of 10.As most modern computer systems or other system that uses the binary,octal & hexadecimal logic for their operation.
+                     That's why calcont has a software which converts decimal to binary,octal,hexadecimal numbers which you can see in below.</p>
+                    <label style="color: #F5ECE0;">Enter Decimal : </label>
+                    <label><input type="number" id="in" placeholder="e.g.( 2025 )" style="border-radius: 7px;width: 20%;padding: 5px 5px 5px 5px;"> </label>
+                    <br><br>
+                    <label style="color: #F5ECE0;display: none;" id="o">Output : </label>
+                    <div style="width: 60px;display: inline-block;height: 10px;padding:8px 30px 8px 30px; border-radius:5px;display: none;background-color: #F5ECE0;" id="obox"></div>
+                    <br>
+                    <center>
+                        <button onclick="binary()" class="convert">BINARY</button>
+                        <button onclick="octal()" class="convert">OCTAL</button>
+                        <button onclick="hexa()" class="convert">HEXADECIMAL</button>
+                    </center>
+                    <br><br><br>
+            </div>
+        </div>
+        <script>
+            function binary(){
+                document.getElementById('o').style.display="inline";
+                document.getElementById('obox').style.display="inline";
+                const a= parseInt(document.getElementById('in').value);
+                const b=a.toString(2);
+                document.getElementById('obox').innerText= b;
+                document.getElementById('o').innerText= "Binary : ";
+            }
+            function octal(){
+                document.getElementById('o').style.display="inline";
+                document.getElementById('obox').style.display="inline";
+                const a= parseInt(document.getElementById('in').value);
+                const b=a.toString(8);
+                document.getElementById('obox').innerText=b;
+                document.getElementById('o').innerText= "Octal : ";
+            }
+            function hexa(){
+                document.getElementById('o').style.display="inline";
+                document.getElementById('obox').style.display="inline";
+                const a= parseInt(document.getElementById('in').value);
+                const b=a.toString(16);
+                document.getElementById('obox').innerText=b;
+                document.getElementById('o').innerText="Hexa Decimal : ";
+            }
+        </script>
+    </body>
+</html>

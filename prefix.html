@@ -1,0 +1,243 @@
+<html>
+    <head>
+        <title>E-CLACULATOR</title>
+        <link rel="icon" href="file-GFKjqjb7z7aqrpmRq7YZAo.webp" type="image/x-icon">
+        <style>
+            .u{
+                list-style-type:none;
+                margin: 0%;
+                padding: 0%;
+                position: fixed;
+            }
+            .u li{
+                display:inline-block;
+                float:left;
+                text-align: center;
+                padding: 10px;
+                padding-top: 30px;
+                margin:0px;
+                width:110px;
+                background-color: #3E7B27;
+                color: #F5ECE0;
+                height:40px;
+                cursor: pointer;
+            }
+            .a:hover{
+                color: white;
+                font-size:110%;
+                background-color: #255f38;
+                transition-delay: 0ms;
+            }
+            .di u{
+                list-style-type:none;
+                margin: 0%;
+                padding: 0%;
+                position: fixed;
+            }
+            .di li{
+                display:inline-block;
+                text-align: center;
+                padding: 5px;
+                margin:7px;
+                border-radius: 5px;
+                border: 2px solid black;
+                width:150px;
+                background-color: #3E7B27;
+                color: #F5ECE0;
+                cursor: pointer;
+                position: relative;
+                right:15%;
+            }
+            .di li:hover{
+                color: white;
+                font-size:110%;
+                background-color: #255f38;
+                transition-delay: 0ms;
+            }
+            button{
+                background-color: #f0c14b;
+                border: 2px solid black;
+                border-radius: 15px;
+                color:black;
+                font-size: 14px;
+                padding: 8px 20px;
+                cursor: pointer;
+                width: 100%; 
+                text-align: center;
+                display: inline-block;
+                transition: background-color 0.3s ease-in-out;
+            }
+            button:hover {
+                background-color: #eeb934;
+            }
+            button:active {
+                background-color: #d8a828;
+                box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) inset;
+            }
+            div>div{
+                background-color:#356e48;
+                border: none;
+                border-radius: 6px;
+            }
+            .di{
+                display: flex;
+                height:auto;
+                align-content: stretch;
+            }
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 8px;
+                text-align: center;
+                box-shadow: 10px rgb(0,0, 0,0.3); 
+                color:#F5ECE0;
+                background-color: rgb(37, 95, 56,0.8);
+            }
+            #calcTable{
+                display: none;
+                width: fit-content;
+            }
+            .convert{
+                background-color: #007BFF;
+                color: white;
+                padding:10px;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                width: 100px;
+            }
+            .convert:hover{
+                opacity: 0.8;
+                background-color: #007BFF;
+            }
+        </style>
+    </head>
+    <body style="padding: 0%;margin: 0%;background-color: #255f38;">
+        <div>
+        <ul class="u">
+            <li style="width:50px;padding-top: 15px;padding-bottom: 25px;padding-right:15px;border-radius: 5px;"><img src="file-GFKjqjb7z7aqrpmRq7YZAo.webp" alt="logo" height="56px" width="56px" style="border-radius: 50%;"></li>
+            <a href="home page.html"><li class="a">Home</li></a>
+            <a href="infix converter.html"><li class="a">Converters</li></a>
+            <a href="postfix.html"><li class="a" style="background-color: #255f38;color: white;font-size: 115%;">Calculators</li></a>
+            <a href="contact us.html"><li class="a">Contact Us</li></a>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li style="width: 105px;"><button>Login</button></li>
+        </ul>
+        </div>
+        <br>
+        <br><br><br>
+        <div class="di">
+            <div style="width: 15%;margin-top:6px;">
+                <ul>
+                    <a href="postfix.html"><li>Postfix Calculator</li></a>
+                    <a href="prefix.html"><li style="color: white;font-size:110%;background-color: #255f38;">Prefix Calculator</li></a>
+                    <a href="hcf lcm.html"><li>Hcf/Lcm Calculator</li></a>
+                </ul>
+            </div>
+        <div style="margin-top: 28px;width: 79%;position: relative;left:3%;padding-left: 15px;height:540px;padding-right: 15px;overflow-y:auto;scrollbar-width: none;">
+                <center>
+                    <h1 style="color: rgb(241, 184, 42);">Prefix expression calculator</h1>
+                    <hr width="90%">
+                    <h2>What is Prefix expression?</h2>
+                </center>
+                <p style="color: #F5ECE0;">An prefix expression is a expression in which first operator comes and proceded by strings.
+                  Every prefix string longer than a single variable contains first and second operands followed by an operator.e.g. A,+A B ,*A B ,+ * A B/ C D.
+                  But in general expressions usually are in infix format.So, we have to convert them into prefix expression.</p>
+                <center><h2>How to evaluate Prefix expression?</h2></center>
+                <pre style="color: #F5ECE0;">1.First we read expression from right to left. So,During reading the expression from right to left, push the element in the stack if it is an operand.
+2.If the current character is an operatorthen pop the two operands from the stack and then evaluate it.
+3.Push back the result of the evaluation. Repeat it till the end of the expression.Checkout examples that are mention below in table.</pre>
+                <h3 style="color:#F5ECE0;">Examples:</h3>
+                    <div style="box-shadow: 10px rgb(0,0, 0,0.3); color:#F5ECE0;border-radius: 10px;padding: 10px;background-color: #255f38;opacity:0.8;">
+                      <p>1) Prefix Expression: + 5 4</p>
+                      <p>Answer: 9</p>
+                      <p>2) Prefix Expression: * 9 4</p>
+                      <p>Answer: 36</p>
+                      <p>3) Prefix Expression:* + 2 5 + 6 7</p>
+                      <p>Answer:91</p>
+                    </div>
+                    <center>
+                        <h2>Calculator</h2>
+                    </center>
+                    <label for="expression" style="color: #F5ECE0;">Enter Expression : </label>
+                    <label><input type="text" name="postfixInput" id="postfixInput" placeholder="e.g.(* + 5 2 3)" style="border-radius: 7px;width: 30%;"> </label>
+                    <button onclick="evaluatePrefix()" class="convert">CALCULATE</button>
+                    <br><br>
+                    <center>
+                    <h2 style="display: none;" id="hidden">Calculation</h2>
+                    <table id="calcTable">
+                        <tr>
+                          <th>Step</th>
+                          <th>Token</th>
+                          <th>Stack</th>
+                          <th>Operation</th>
+                        </tr>
+                    </table>
+                    </center>
+                    <h3 style="color: #F5ECE0;display: none;" id="f">Final Result: <span id="result"></span></h3>
+                <center><h2>Applications</h2></center>
+                <p style="color: #F5ECE0;">As postfix evaluator is important and also has its advantage like that prefix evaluator is somewhat similar but here operator positioning is differnet but
+                  advantage will be same. Such as in calculators, in which it scans and calculate expression value.</p>
+                    <br><br><br>
+            </div>
+        </div>
+        <script>
+          function evaluatePrefix() {
+            const expr = document.getElementById('postfixInput').value.trim();
+            const tokens = expr.split(/\s+/).reverse();
+            const stack = [];
+            const table = document.getElementById("calcTable");
+            document.getElementById('calcTable').style.display="block";
+            document.getElementById('hidden').style.display="inline";
+            document.getElementById('f').style.display="inline";
+            // Clear previous rows
+            table.innerHTML = `
+              <tr>
+                <th>Step</th>
+                <th>Token</th>
+                <th>Stack</th>
+                <th>Operation</th>
+              </tr>
+            `;
+            let step = 1;
+            for (let token of tokens) {
+              let operation = "";
+              if (!isNaN(token)) {
+                stack.push(parseFloat(token));
+                operation = `Pushed ${token}`;
+              } else {
+                let a = stack.pop();
+                let b = stack.pop();
+                let result;
+                switch (token) {
+                  case '+': result = a + b; break;
+                  case '-': result = a - b; break;
+                  case '*': result = a * b; break;
+                  case '/': result = a / b; break;
+                  case '^': result = Math.pow(a, b); break;
+                  default:
+                    alert("Unknown operator: " + token);
+                    return;
+                }
+                stack.push(result);
+                operation = `${token} applied to ${a}, ${b} = ${result}`;
+              }
+              const row = table.insertRow();
+              row.innerHTML = `
+                <td>${step++}</td>
+                <td>${token}</td>
+                <td>[${stack.join(", ")}]</td>
+                <td>${operation}</td>
+              `;
+            }
+            document.getElementById("result").innerText = stack.length === 1 ? stack[0] : "Error";
+          }
+          </script>          
+        </script>
+    </body>
+</html>
